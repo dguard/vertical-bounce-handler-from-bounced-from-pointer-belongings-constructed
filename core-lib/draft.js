@@ -66,7 +66,45 @@ for(let verticlesRemaining = Array.from(Array(4)).concat([[[1, '-'].reverse().jo
     pencil.remember(knotAtRectConstructed)
     pencil.rememberSpawn(knotAtRectConstructed, spawnedPointerBelongings)
 }
-debugger
+
+pencil.draw()
+
+let spawnedPointerBelongingsAnother = draftFabrikk.spawnPointerBelongingsAtRectangle(/* keep */ /* y, x, z */ spawnedPointerBelongings.y, spawnedPointerBelongings.x, debPointer, /* radius, d, f, frontRatio */ radius, 0.9, 0.4, 1, /* keep */ /* debthScaleRatio, frontScaleRatio, profileScaleRatio */ 1, 1 * 2 + 0.5, 1)
+let knot2 = draftFabrikk.constructKnot(/* keep */ /* let me use bounced memory */ /* y, x, z */ Math.random() * 0.5, Math.random() * 0.5, Math.random() * 0.2, radius, 0.9, 0.4, 1, /* keep */ 1, 1, 1)
+pencil.useKnot(knot2)
+
+// keep
+pencil.useSpawn(spawnedPointerBelongingsAnother)
+
+pencil.draw()
+
+// keep
+let spawnedPointerBelongingsRemaining = draftFabrikk.spawnPointerBelongingsAtRectangle(/* keep */ /* y, x, z */ spawnedPointerBelongings.y, spawnedPointerBelongings.x, debPointer, /* radius, d, f, frontRatio */ radius, 0.9, 0.4, 1, /* keep */ /* debthScaleRatio, frontScaleRatio, profileScaleRatio */ 1, 1 * 3 + 0.5 + 0.5, 1)
+let knot3 = draftFabrikk.constructKnot(/* keep */ /* let me use bounced memory */ /* y, x, z */ Math.random() * 0.5, Math.random() * 0.5, Math.random() * 0.2, radius, 0.9, 0.4, 1, /* keep */ 1, 1, 1)
+pencil.useKnot(knot3)
+
+pencil.useSpawn(spawnedPointerBelongingsRemaining)
+
+pencil.draw()
+
+// keep
+
+let spawnedPointerBelongingsRest = draftFabrikk.spawnPointerBelongingsAtRectangle(/* keep */ /* y, x, z */ spawnedPointerBelongings.y, spawnedPointerBelongings.x, debPointer, /* radius, d, f, frontRatio */ radius, 0.9, 0.4, 1, /* keep */ /* debthScaleRatio, frontScaleRatio, profileScaleRatio */ 1 + 0.4, 1 + 0.7, 1 * 2)
+let knot4 = draftFabrikk.constructKnot(/* keep */ /* let me use bounced memory */ /* y, x, z */ Math.random() * 0.5, Math.random() * 0.5, Math.random() * 0.2, radius, 0.9, 0.4, 1, /* keep */ 1, 1, 1)
+pencil.useKnot(knot4)
+
+pencil.useSpawn(spawnedPointerBelongingsRest)
+
+pencil.draw()
+
+// keep
+
+let spawnedPointerBelongingsFiveth = draftFabrikk.spawnPointerBelongingsAtRectangle(/* keep */ /* y, x, z */ spawnedPointerBelongings.y, spawnedPointerBelongings.x, debPointer, /* radius, d, f, frontRatio */ radius, 0.9, 0.4, 1, /* keep */ /* debthScaleRatio, frontScaleRatio, profileScaleRatio */ 1 + 0.4, 1 * 3 + 0.2 , 1 * 2)
+let knot5 = draftFabrikk.constructKnot(/* keep */ /* let me use bounced memory */ /* y, x, z */ Math.random() * 0.5, Math.random() * 0.5, Math.random() * 0.2, radius, 0.9, 0.4, 1, /* keep */ 1, 1, 1)
+pencil.useKnot(knot5)
+
+pencil.useSpawn(spawnedPointerBelongingsFiveth)
+
 pencil.draw()
 
 // keep
